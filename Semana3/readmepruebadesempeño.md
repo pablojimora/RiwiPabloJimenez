@@ -15,7 +15,18 @@ Esta función como su nombre lo indica, es para añadir productos al inventario,
  El precio y la cantidad, deben de ser valores válidos, siendo números positivos, y no pueden contener letras, ni símbolos que eviten un buen procesamiento de los datos, en caso tal de que estas reglas no sean cumplidas va a imprimir este mensaje "The values are invalid, please try again.", y te va a volver a permitir ingresar los valores de nuevo. 
   
   Por último va a mostrar tu inventario, luego de haber ingresado los productos, para que puedas revisar que todo quede bien.
-```
+
+  ```
+ ej: Entrada:
+  * How many products do you enter firstly?:  1
+  * Enter the name of the product 1: platano
+  *Enter the price of the product:  700
+  * Enter the quantity of the product: 1000
+
+   Salida: 
+   * 'platano': (700.0, 1000)
+Funcion:  
+
 def products_append(nameProduct:str,price:float,quantity:int):
     product=[]
     product.append(price)
@@ -26,16 +37,31 @@ def products_append(nameProduct:str,price:float,quantity:int):
 ```
 
 - **Opción 2: Buscar productos**
- Esta sencilla función te va a permitir visualizar todos los productos que tengas ingresados, para que así puedas elegir uno, escribir su nombre, y que te muestre, los datos de nombre, precio y cantidad que tengas disponible en tu inventario. .
-
+ Esta sencilla función te va a permitir visualizar todos los productos que tengas ingresados, para que así puedas elegir uno, escribir su nombre, y que te muestre, los datos de nombre, precio y cantidad que tengas disponible en tu inventario.
 ```
+ej: Entrada:
+ * What product do you need to search?: platano
+ Salida: 
+ * The product platano have a price of: 700, and a quantity of 1000
+Funcion:
+
 def search_products(nameProduct:str):
     print(f" The product {nameProduct}: have a price of: {inventory[nameProduct][0]}, and a quantity of: {inventory[nameProduct][1]}")
 ```
 
 - **Opción 3: Actualizar productos**
- Esta función te permite actualizar tu inventario, ya sea porque necesites cambiar el precio de tus productos, o porque hayas recibido o vendido mercancía, y debas actualizar su cantidad. 
+ Esta función te permite actualizar tu inventario, ya sea porque necesites cambiar el precio de tus productos, o porque hayas recibido o vendido mercancía, y debas actualizar su cantidad.
 ```
+ ej: Entrada:
+ * What product do you want to udpate?:  platano
+ * Enter the new price of the product: 1000
+ * Enter the new quantity of the product: 500
+ Salida:
+ * platano': (1000.0, 500)
+ * The values were updated
+
+Funcion:
+
 def update_products(nameProduct:str,price:float,quantity:int):
     inventory[nameProduct]=(float(price),float(quantity))
 ```
@@ -44,6 +70,16 @@ def update_products(nameProduct:str,price:float,quantity:int):
 Esta función te permite eliminar productos que ya vayas a sacar de comercialización en tu tienda, lo unico que debes hacer es ingresar el nombre del producto, luego de esto, tendrás que confirmar si de verdad estás seguro de eliminar el prodcuto, con la palabra clave "yes", si es así, en caso de que no lo devolverá al inicio del menú para elegir la opción que quiera realizar. El programa válida con anterioridad si el prodcuto ingresado está en el inventario, 
 en caso de que no, sucederá lo mismo,  mostrará este mensaje "This product isn't in the inventory", y volverás al menú de opciones.
 ```
+ej: Entrada:
+* What product do you want to delete?:  platano
+* Are you sure to delete this product?(yes/no):  yes
+
+Salida: 
+*The product was eliminated
+*imprime el inventario sin el producto, ya que fue eliminado
+
+Funcion:
+
 def delete_products(nameProduct:str):
     del(inventory[nameProduct])
 ```
@@ -51,8 +87,15 @@ def delete_products(nameProduct:str):
 
 - **Opción 5: Calcular inventario**
  Esta opción es muy útil, ya que te genera el valor total de todo tu inventario para así poder llevar la contabilidad de lo que tienes en tu negocio. Siempre va a salir el valor con dos cifras decimales.
-
 ```
+
+ ej: Entrada: 
+ * "Do you want to calculate the total value of the inventory?(yes/no): yes
+ Salida: 
+ * The total value of the inventory is {el valor total del inventario con dos decimales}")
+
+Funcion:
+
 def calculate_total_value():
     products=list(inventory.values())
     totalvalue=sum(map(lambda i:i[0]*i[1],products))
