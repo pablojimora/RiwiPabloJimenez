@@ -1,8 +1,9 @@
 # PRUEBA DESEMPEÑO MODULO 1
 ## INVENTARIO DE PRODUCTOS
-
+<p>
 Esta es la prueba de desempeño número 1 del lenguaje de programación de alto nivel Python, la cual fue solicitada por Riwi,  y realizada por Pablo Jiménez Mora.
 El manejo del inventario tiene las siguientes funcionalidades: 
+</p>
 
 1. **Añadir productos: **
 Esta función como su nombre lo indica, es para añadir productos al inventario, primeramente te va a preguntar, cuántos productos quieres agregar, para así proseguir a pedirte la información de cada uno de ellos, cuando termines de digitar la información, te aparecerá este mensaje de confirmación "The product is entered succesfully", el cual confirma que los productos que ingresaste fueron cargados correctamente al inventario. 
@@ -22,5 +23,6 @@ Esta función te permite eliminar productos que ya vayas a sacar de comercializa
 
 5. **Calcular el valor total del inventario**
  Esta opción es muy útil, ya que te genera el valor total de todo tu inventario para así poder llevar la contabilidad de lo que tienes en tu negocio.
+ 
  
 
