@@ -1,0 +1,26 @@
+# PRUEBA DESEMPEÑO MODULO 1
+## INVENTARIO DE PRODUCTOS
+
+Esta es la prueba de desempeño número 1 del lenguaje de programación de alto nivel Python, la cual fue solicitada por Riwi,  y realizada por Pablo Jiménez Mora.
+El manejo del inventario tiene las siguientes funcionalidades: 
+
+1. **Añadir productos: **
+Esta función como su nombre lo indica, es para añadir productos al inventario, primeramente te va a preguntar, cuántos productos quieres agregar, para así proseguir a pedirte la información de cada uno de ellos, cuando termines de digitar la información, te aparecerá este mensaje de confirmación "The product is entered succesfully", el cual confirma que los productos que ingresaste fueron cargados correctamente al inventario. 
+
+ El precio y la cantidad, deben de ser valores válidos, siendo números positivos, y no pueden contener letras, ni símbolos que eviten un buen procesamiento de los datos, en caso tal de que estas reglas no sean cumplidas va a imprimir este mensaje "The values are invalid, please try again.", y te va a volver a permitir ingresar los valores de nuevo. 
+  
+  Por último va a mostrar tu inventario, luego de haber ingresado los productos, para que puedas revisar que todo quede bien.
+  
+2. **Buscar productos**
+ Esta sencilla función te va a permitir visualizar todos los productos que tengas ingresados, para que así puedas elegir uno, escribir su nombre, y que te muestre, los datos de nombre, precio y cantidad que tengas disponible en tu inventario. 
+ 
+3. **Actualizar productos**
+ Esta función te permite actualizar tu inventario, ya sea porque necesites cambiar el precio de tus productos, o porque hayas recibido o vendido mercancía, y debas actualizar su cantidad.
+ 
+4. **Eliminar productos**
+Esta función te permite eliminar productos que ya vayas a sacar de comercialización en tu tienda, lo unico que debes hacer es ingresar el nombre del producto, luego de esto, tendrás que confirmar si de verdad estás seguro de eliminar el prodcuto, con la palabra clave "yes", si es así, en caso de que no lo devolverá al inicio del menú para elegir la opción que quiera realizar. El programa válida con anterioridad si el prodcuto ingresado está en el inventario, en caso de que no, sucederá lo mismo,  mostrará este mensaje "This product isn't in the inventory", y volverás al menú de opciones.
+
+5. **Calcular el valor total del inventario**
+ Esta opción es muy útil, ya que te genera el valor total de todo tu inventario para así poder llevar la contabilidad de lo que tienes en tu negocio.
+ 
+
