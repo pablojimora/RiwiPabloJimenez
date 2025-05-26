@@ -1,0 +1,5 @@
+nombre= "dbriwi"
+usuario= "pablojimora"
+contraseña="Riwi2025*"
+puerto="3080"
+url="www.riwi.com/BD"
