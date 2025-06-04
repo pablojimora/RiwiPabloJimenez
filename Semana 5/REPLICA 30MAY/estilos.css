@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;800&display=swap');
+:root{
+    --colorazul:#BDFDFF;
+    --colorrosado:#FF7070;
+    --colorgris:#000000;
+    --colorblanco:#ffff;
+    --azuloscuro:#00ffe1cb;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Caveat", sans-serif;
+}
+input {
+    font-family:"Caveat", sans-serif
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+.container{
+    background-color: var(--colorazul);
+    width: 100%;
+    height: 300px;
+    padding-top: 30px;
+}
+.c_cart{
+    background-color: var(--colorblanco);
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.input_search{
+    background-color: var(--colorblanco);
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: inline-block;
+    display: flex;
+    width: 1000px;
+}
+.input_search input{
+    border: none;
+    font-size:xx-large;
+}
+.container_azuloscuro{
+    background-color: var(--azuloscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100px;
+    border-radius: 20px;
+    margin-right: 530px;
+    margin-left: 530px;
+    margin-top: 20px;
+}
+.marcas{
+    background-color: var(--colorblanco);
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+}
+.discount{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+.message{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    margin-top: 20px;
+}
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+}
+.puma{
+    width: 235px;
+    height: 235px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: var(--colorazul);
+}
+.adidas{
+    width: 320px;
+    height: 230px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: var(--colorrosado);
+}
+.jordan{
+    width: 248px;
+    height: 235px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: var(--colorgris);
+}
+.messages_shoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+
+}
+.puma_msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: var(--colorazul);
+}
+.adidas_msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 62px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: var(--colorrosado);
+}
+.jordan_msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 62px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: var(--colorgris);
+}
+.blanco{
+    background-color: var(--colorblanco);
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: auto;
+}

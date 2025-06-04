@@ -1,0 +1,8 @@
+.nombre{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.container{
+    background-color: blue;
+}

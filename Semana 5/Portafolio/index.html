@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portafolio Pablo Jimenez</title>
+</head>
+<body>
+    <header class="header">
+        <!-- Barra de navegacion -->
+        <nav class="barra_navegacion">
+            <a href="index.html">
+                <h1 class="nombre" id="Home">Pablo Jiménez Mora</h1>
+            </a>
+            
+            <input id="icono_menu" class="icono_menu" type="checkbox">
+
+            <label for="icono_menu">
+                <img src="./assets/images/menu.png" alt="Menú" style: width="20px" class="imagen_menu">
+            </label>
+            
+            <ul class="ul_links_nav">
+                <li class="li_links_nav">
+                    <a class="link_nav" href="#Home">Home</a>
+                </li>
+                <li class="li_links_nav">
+                    <a class="link_nav" href="#about_me">About Me</a>
+                </li><li class="li_links_nav">
+                    <a class="link_nav" href="#skills">Skills</a>
+                </li><li class="li_links_nav">
+                    <a class="link_nav" href="#proyects">Proyects</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- seccion principal home -->
+        <section class="seccion_principal estilo_secciones_globales">
+            <article class="seccion_principal_article">
+                <h2 class="seccion_principal_h2">Hello I am Pablo Jimenez</h2>
+                <h3 class="seccion_principal_h3">Biomedical engeener & Riwi developer</h3>
+                <p class="seccion_principal_p">
+                    I am a biomedical engeener passionated with the software develpment.
+                    I love creating attractive and functional websites and I am constantly 
+                    learning to improve my skills.                
+                </p>
+                <div class="btn_contenedor">
+                    <a class="boton" href="https://www.linkedin.com/in/pablo-jiménez-mora-83500531b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Contact me</a>
+                    <a class="boton" href="http://127.0.0.1:5500/index.html#" target="_blank">Portafolio</a>
+                </div>
+            </article>
+            <img class="img_principal" src="./assets/images/fotoportafolio.png" alt="Pabloimg">
+        </section>
+        <section class="seccion_sobreMi estilo_secciones_globales">
+            <!-- Seccion sobre MI -->
+            <article class="article_sobreMi">
+                <h2 id="about_me" class="h2_sobreMi titulos_secciones">About Me</h2>
+                <p class="p_sobreMi">
+                    I was graduated from ITM university at Medellín Colombia, as engeener 
+                    I have a nice skills for software development, and I can help you to improve or create your projects
+                    succesfully. 
+                </p>
+            </article>
+            <img class="imagen_sobreMi" src="./assets/images/aboutme.png" alt="Pabloimg" style="border-radius:10% ; width: 320px;">
+        </section>
+        <section class="seccion_Habilidades estilo_secciones_globales">
+            <!-- Seccion habilidades -->
+                <h2 id="skills" class="h2_habilidades titulos_secciones">Skills</h2>
+                <div class="contenedor_habilidades">
+                    <article class="article_Habilidades">
+                        <div>
+                            <h3 class="titulos_h3">HTML</h3>
+                            <img class="icono_habilidades" src="./assets/images/html.png" alt="html">
+                        </div>
+                        <div>
+                            <h3 class="titulos_h3">CSS</h3>
+                            <img class="icono_habilidades" src="./assets/images/css" alt="css">
+                        </div>
+                        <div>
+                            <h3 class="titulos_h3">Python</h3>
+                            <img class="icono_habilidades" src="./assets/images/python.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="titulos_h3">Github</h3>
+                            <a href="https://github.com/pablojimora"><img class="icono_habilidades" src="./assets/images/github.png" alt=""></a>
+                        </div>
+                    </article>
+                </div> 
+        </section>
+        <section class="seccion_proyectos estilo_secciones_globales">
+            <!-- Seccion proyectos -->
+                <h2 id="proyects" class="h2_proyectos titulos_secciones">Proyects</h2>
+                <div class="contenedor_proyectos">
+                    <article class="contenedor_proyecto">
+                        <h3 class="titulos_h3">Portafolio with HTML and CSS</h3>
+                        <img class="img_pryecto" src="./assets/images/images.jpeg" alt="imagenportafolio">
+                        <p class="p_proyecto">
+                            For my first project, I used HTML and CSS for create this portafolio.
+                        </p>
+                    </article>
+                    <article class="contenedor_proyecto">
+                        <h3 class="titulos_h3">Coming Soon</h3>
+                        <img class="img_pryecto" src="./assets/images/ICONO_COMINGSOON.png" alt="imagenportafolio" style="width: 58%;">
+                        <p class="p_proyecto">
+                            So far, that is my only project, and I will be publicate my others projects, ideas and experiments related with my new knowledge, this is only the start,
+                            but I feel like to growing from here. 
+                        </p>
+                    </article>
+                </div>
+        </section>
+    </main>
+</body>
+</html>

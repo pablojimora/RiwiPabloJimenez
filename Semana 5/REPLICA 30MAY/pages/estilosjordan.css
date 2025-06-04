@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;800&display=swap');
+:root{
+    --colorazul:#BDFDFF;
+    --colorrosado:#FF7070;
+    --colorgris:#00000060;
+    --colorblanco:#ffff;
+    --azuloscuro:#72AAFF;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Caveat", sans-serif;
+    background-color: var(--colorazul);
+}
+input {
+    font-family:"Caveat", sans-serif
+}
+.container{
+    padding-top: 30px;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+.c_cart{
+    background-color: var(--colorblanco);
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.input_search{
+    background-color: var(--colorblanco);
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: inline-block;
+    display: flex;
+    width: 1000px;
+}
+.input_search input{
+    border: none;
+    font-size:xx-large;
+}
+.container2{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5vh;
+    width: 100vw;
+    height: 100%;
+}
+
+.hero_img{
+    padding: auto;
+    height: 20em;
+    /* width: 20em; */
+}
+.items_grid{
+    height: 100%;
+}
+.i{
+    grid-column: 1/3;
+    background-color: var(--colorgris);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.ii{
+    background-color: var(--azuloscuro);
+    grid-column: 1;
+    grid-row: 2/4;
+    border-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.iii{
+    background-color: var(--azuloscuro);
+    grid-column: 2;
+    grid-row: 2/3;
+    border-radius: 20px;
+    padding: 1em;
+}
+.section1{
+    padding: 1em;
+    background-color: var(--colorblanco);
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    gap: 1%;
+    width: 75vw;
+    height: 60vh;
+}
+.section2{
+    padding-block: 1em;
+    display: flex;
+    width: 20vw;
+    height: 60vh;
+    background-color: var(--colorblanco);
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.msg_s2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size:xx-large;
+    margin: 20px;
+}
+.nike{
+    width: 200px;
+    height: 110px;
+    padding: 0 10px;
+    margin-inline: auto;
+}
+.nike2{
+    width: 200px;
+    height: 250px;
+    margin-inline: auto;
+
+}
