@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Nombre Completo",
+      "email": "correo@ejemplo.com",
+      "phone": "1234567890",
+      "enrollNumber": "12345678901234",
+      "dateOfAdmission": "08-Dec-2021",
+      "role": "admin",
+      "password": "12345678"
+    },
+    {
+      "id": "58f5",
+      "name": "Pedro",
+      "email": "pedro@gmail.com",
+      "phone": "5412541254",
+      "enrollNumber": "454544",
+      "dateOfAdmission": "41/5/20",
+      "role": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "f7fb",
+      "name": "Andres",
+      "email": "regalada@gmail.com",
+      "phone": "3514145896",
+      "enrollNumber": "2145",
+      "dateOfAdmission": "478512",
+      "role": "admin",
+      "password": "1234"
+    }
+  ]
+  
+}

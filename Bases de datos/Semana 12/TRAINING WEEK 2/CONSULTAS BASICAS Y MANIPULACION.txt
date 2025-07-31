@@ -1,0 +1,12 @@
+CONSULTAS BASICAS Y MANIPULACION 
+
+*** Obtener el listado de todos los estudiantes junto con sus inscripciones y cursos (JOIN).
+
+SELECT e.nombre_completo AS Estudiante, c.nombre AS Curso
+    -> FROM estudiantes e
+    -> LEFT JOIN inscripciones m ON e.id_estudiante = m.id_estudiante
+    -> LEFT JOIN cursos c ON m.id_curso = c.id_curso;
+    
+    
+***Listar los cursos dictados por docentes con más de 5 años de experiencia.
+

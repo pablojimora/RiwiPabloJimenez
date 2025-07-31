@@ -1,0 +1,49 @@
+Taller david: 
+
+1.Mostrar todos los datos de la tabla usuarios.
+2.Mostrar solo los nombres y edades de todos los usuarios.
+3.Listar los usuarios cuya edad esté entre 18 y 25 años.
+
+SELECT nombre, edad FROM usuarios WHERE edad BETWEEN 18 AND 25;
+
+4.Obtener todos los usuarios activos (isActive = true).
+
+SELECT * FROM usuarios WHERE isActive = 1;
+
+
+5.Ordenar los usuarios por edad en orden descendente.
+
+SELECT * FROM usuarios ORDER BY edad DESC;
+6.Obtener el promedio de las notas de todos los usuarios.
+
+SELECT AVG(nota) FROM usuarios;
+
+
+7.Contar cuántos usuarios hay registrados.
+
+SELECT COUNT(*) FROM usuarios;
+SELECT MAX(edad) FROM usuarios;
+
+
+8.Encontrar el usuario con mayor edad.
+
+SELECT * FROM usuarios WHERE edad=60; 
+
+9.Encontrar el usuario con menor edad.
+SELECT nombre FROM usuarios WHERE edad=15;
+SELECT MIN(edad) FROM usuarios;
+
+
+10.Mostrar los usuarios de la ciudad de 'Medellín'.
+
+SELECT * FROM usuarios WHERE ciudad='Medellin';
+
+11.Contar cuántos usuarios están activos (isActive = true).
+
+SELECT COUNT(*) FROM usuarios WHERE isActive=1;
+
+12.Mostrar nombre, edad y nota de los usuarios que tengan una nota mayor o igual a 4.0 y sean activos.
+
+SELECT nombre, edad, nota FROM usuarios WHERE nota>=4 AND isActive=1;
+
+

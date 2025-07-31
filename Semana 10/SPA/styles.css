@@ -1,0 +1,389 @@
+/* PRINCIPAL */
+:root {
+    --primary-color: #6A00FE;
+    --secondary-color: #F2EAE1;
+    --terciary-color: #B600FE;
+    --text-color: #000000;
+    --backgrounds: #FFFFFF;
+    --borders: #D1D1D1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 270px 1fr;
+}
+
+.user{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* BARRA DE NAVEGACIÓN IZQUIERDA */
+.bar-nav{
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    gap: 10px;
+}
+
+.h2-titulo{
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.imgguy{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.bar-nav button{
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.icono{
+    width: 17px;
+    height: 17px;
+    fill: var(--text-color);
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* MAIN */
+
+main{
+    display: flex;
+}
+
+/* SIGNUP FORM */
+#login-spa{
+    align-self: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--backgrounds);
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+#login-spa input{
+    padding: 10px;
+    border: 1px solid var(--borders);
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#login-spa input:focus{
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+#login-spa button{
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--backgrounds);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.title-users{
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de usuarios */
+#container-users {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Fila de usuario (user-info como fila) */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid var(--borders);
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    flex-wrap: wrap;
+}
+
+.user-info:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Imagen */
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Título del nombre */
+.users-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 20px;
+    flex: 1 1 150px;
+    color: #333;
+}
+
+/* Datos del usuario */
+.user-info p {
+    font-size: 13px;
+    margin: 0;
+    color: #444;
+    flex: 1 1 150px;
+    min-width: 140px;
+    word-break: break-word;
+}
+
+/* Botones de acción */
+.edit-user-btn,
+.delete-user-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: auto;
+}
+
+/* Espaciado entre los botones */
+.edit-user-btn {
+    margin-right: 10px;
+}
+
+/* Íconos de Font Awesome */
+.edit-user-btn i,
+.delete-user-btn i {
+    pointer-events: none;
+}
+
+/* Estilo general del section */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* Título */
+section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Formulario con tarjeta blanca */
+form#new-user-form {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Imagen de perfil simulada arriba */
+form#new-user-form::before {
+    content: '';
+    background-image: url('/home/pablojimenez/Escritorio/Pablo/RiwiPabloJimenez/Semana 10/SPA/images/e926f691a012af425ff39d25b0ca54f0223c82cf.jpg'); /* o usa FontAwesome si prefieres */
+    background-size: cover;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 20px;
+    background-color: #e5e7eb;
+}
+
+/* Etiquetas */
+form#new-user-form label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Campos de texto */
+form#new-user-form input,
+form#new-user-form select {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+form#new-user-form input:focus,
+form#new-user-form select:focus {
+    border-color: #4f46e5;
+}
+
+/* Botones contenedor */
+form#new-user-form button[type="submit"],
+form#new-user-form .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form#new-user-form .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Estilo general del section */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* Título */
+section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Formulario estilo tarjeta */
+form#update-user-form {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Imagen de perfil simulada arriba */
+form#update-user-form::before {
+    content: '';
+    background-image: url('./images/user-placeholder.png'); /* o tu avatar por defecto */
+    background-size: cover;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 20px;
+    background-color: #e5e7eb;
+}
+
+/* Etiquetas */
+form#update-user-form label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Inputs */
+form#update-user-form input {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+form#update-user-form input:focus {
+    border-color: #4f46e5;
+}
+
+/* Botón de actualización */
+form#update-user-form button[type="submit"] {
+    margin-top: 10px;
+    background-color: #6d28d9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
