@@ -41,41 +41,7 @@ document.addEventListener("DOMContentLoaded", obtener_datos);
 
 
 
-function addUser() {
-    const form = document.getElementById("new-user-form");
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
 
-        const nombre = document.getElementById("name").value.trim();
-        const apellido = document.getElementById("lastName").value.trim();
-        const departamento = document.getElementById("department").value.trim();
-        const edad = parseInt(document.getElementById("age").value);
-        const salario = parseFloat(document.getElementById("salary").value);
-        const fecha_ingreso = document.getElementById("dateAdmission").value.trim();
-
-        const newUser = {
-            nombre,
-            apellido,
-            departamento,
-            edad,
-            salario,
-            fecha_ingreso
-        };
-
-        console.log("Enviando usuario:", newUser);
-
-        try {
-            await post(urlUsers, newUser);
-            alert(" El usuario fue agregado correctamente");
-            form.reset();
-            obtener_datos();
-        } catch (error) {
-            console.log("Error agregando usuario:", error);
-        }
-    });
-}
-
-addUser()
 
 //Este bloque sirve para que se pueda capturar el id del usuario que se va a editar
 //Esto se hace por medio de delegacion de eventos: permite manejar elementos dinamicos, que no estan por defecto en el DOM 
@@ -107,7 +73,7 @@ document.getElementById("users-container").addEventListener("click", async funct
 });
 
 
-function updateUser() {
+function addUser() {
     const form = document.getElementById("new-user-form");
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -119,7 +85,7 @@ function updateUser() {
         const salario = parseFloat(document.getElementById("salary").value);
         const fecha_ingreso = document.getElementById("dateAdmission").value.trim();
 
-        const updatedUser = {
+        const newUser = {
             nombre,
             apellido,
             departamento,
@@ -127,16 +93,62 @@ function updateUser() {
             salario,
             fecha_ingreso
         };
-        console.log("Actualizando usuario:", updatedUser);
+
+        console.log("Enviando usuario:", newUser);
 
         try {
-            await update(urlUsers, userId, updatedUser);
-            alert(" El usuario fue actualizado correctamente");
+            if (userId) {
+                await update(urlUsers, userId, newUser);
+                alert(" El usuario fue actualizado correctamente");
+                form.reset();
+                obtener_datos();
+
+            } else {
+
+            
+            await post(urlUsers, newUser);
+            alert(" El usuario fue agregado correctamente");
             form.reset();
             obtener_datos();
+            }
         } catch (error) {
-            console.log("Error actualizando usuario:", error);
+            console.log("Error agregando usuario:", error);
         }
     });
 }
-updateUser()
+
+addUser()
+
+// function updateUser() {
+//     const form = document.getElementById("new-user-form");
+//     form.addEventListener("submit", async (e) => {
+//         e.preventDefault();
+
+//         const nombre = document.getElementById("name").value.trim();
+//         const apellido = document.getElementById("lastName").value.trim();
+//         const departamento = document.getElementById("department").value.trim();
+//         const edad = parseInt(document.getElementById("age").value);
+//         const salario = parseFloat(document.getElementById("salary").value);
+//         const fecha_ingreso = document.getElementById("dateAdmission").value.trim();
+
+//         const updatedUser = {
+//             nombre,
+//             apellido,
+//             departamento,
+//             edad,
+//             salario,
+//             fecha_ingreso
+//         };
+//         console.log("Actualizando usuario:", updatedUser);
+
+//         try {
+//             await update(urlUsers, userId, updatedUser);
+//             alert(" El usuario fue actualizado correctamente");
+//             form.reset();
+//             obtener_datos();
+//         } catch (error) {
+//             console.log("Error actualizando usuario:", error);
+//         }
+//     });
+// }
+// updateUser()

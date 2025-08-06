@@ -53,9 +53,13 @@ app.post('/users', async (req, res) => {
 app.put('/users/:id', async (req, res) => {
   const { id } = req.params;
   const { nombre, apellido, departamento, edad, salario, fecha_ingreso } = req.body;
+
+  console.log(id);
+  
+
   try {
     const result = await db.query(
-      'UPDATE empleados SET nombre = $1, email = $2 WHERE id = $3',
+      'UPDATE empleados SET nombre = $1, apellido = $2, departamento = $3, edad = $4, salario = $5, fecha_ingreso = $6 WHERE id = $7',
       [nombre, apellido, departamento, edad, salario, fecha_ingreso, id]
     );
     if (result.rowCount === 0) return res.status(404).json({ message: 'Usuario no encontrado' });
