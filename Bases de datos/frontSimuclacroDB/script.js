@@ -1,4 +1,4 @@
-import {get, post, update} from './services.js'
+import {get, post, update, deletes} from './services.js'
 
 const urlUsers= "http://localhost:3000/users"
 
@@ -23,7 +23,7 @@ function obtener_datos() {
                 <p>Salario:${user.salario}</p>
                 <p>Fecha de ingreso:${user.fecha_ingreso.split("T")[0]}</p>
                 <button class="edit-user-btn" >Editar</button>
-                <button class="delete-user-btn" >Borrar</button>
+                <button class="delete-user-btn">Borrar</button>
                 </div>
                 `;
                 containerUsers.appendChild(userElement);
@@ -38,9 +38,6 @@ function obtener_datos() {
 }
 
 document.addEventListener("DOMContentLoaded", obtener_datos);
-
-
-
 
 
 //Este bloque sirve para que se pueda capturar el id del usuario que se va a editar
@@ -97,6 +94,7 @@ function addUser() {
         console.log("Enviando usuario:", newUser);
 
         try {
+            // con este condicional hago que si hay un userId haga la actualziacion y si no hay haga el agregar
             if (userId) {
                 await update(urlUsers, userId, newUser);
                 alert(" El usuario fue actualizado correctamente");
@@ -118,6 +116,31 @@ function addUser() {
 }
 
 addUser()
+
+//Este bloque sirve para que se pueda capturar el id del usuario que se va a eliminar
+
+// Este bloque sirve para capturar el id del usuario que se va a eliminar
+let userIddel;
+
+document.getElementById("users-container").addEventListener("click", function (event) {
+    if (event.target.matches('button[class="delete-user-btn"]')) {
+        userIddel = event.target.parentElement.querySelector("p").textContent.split(": ")[1];
+        console.log(userIddel);
+        deleteUser(userIddel);
+    }
+});
+
+// Función para eliminar usuarios
+async function deleteUser(userIddel) {
+    console.log(`El usuario eliminado es: ${userIddel}`);
+    try {
+        await deletes(urlUsers, userIddel);
+        alert("El usuario fue eliminado correctamente");
+    } catch (error) {
+        alert("No se pudo eliminar el usuario. Verifica el ID.");
+        console.error("Error eliminando usuario:", error);
+    }
+}
 
 // function updateUser() {
 //     const form = document.getElementById("new-user-form");
