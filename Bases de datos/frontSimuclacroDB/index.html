@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+</head>
+
+<body>
+    <div>
+        <h1>Datos</h1>
+        <form id="new-user-form">
+            <label>Nombre:</label><input type="text" id="name">
+            <label>Apellido:</label><input type="text" id="lastName">
+            <label>Departamento:</label><input type="text" id="department">
+            <label>Edad: </label><input type="text" id="age">
+            <label>Salario:</label><input type="text" id="salary">
+            <label>Fecha de ingreso:</label><input type="date" id="dateAdmission">
+            <button type="submit" id="submit-btn">Agregar Usuario</button>
+        </form>
+    </div>
+
+    <div id="users-container"></div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
