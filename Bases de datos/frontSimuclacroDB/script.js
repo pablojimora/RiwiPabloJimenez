@@ -1,6 +1,30 @@
-import {get, post, update, deletes} from './services.js'
+import { get, post, update, deletes } from './services.js'
 
-const urlUsers= "http://localhost:3000/users"
+
+const urlUsers = "http://localhost:3000/users"
+
+const buttonCsv = document.getElementById('button_ccsv')
+
+
+buttonCsv.addEventListener("click", () => {
+    console.log("click");
+    fetch('http://localhost:3000/importProducts')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error en la respuesta del servidor');
+            }
+            return response.json();  // parsea la respuesta como JSON
+        })
+        .then(data => {
+            location.reload();
+            // Aquí puedes actualizar la UI, mostrar mensaje, etc.
+        })
+        .catch(error => {
+            console.error('Error en fetch:', error);
+            // Mostrar error en pantalla si quieres
+        });
+})
+
 
 function obtener_datos() {
     try {
@@ -8,7 +32,7 @@ function obtener_datos() {
         containerUsers.innerHTML = ""; // limpiar antes de mostrar
 
         let userData = get(urlUsers)
-        
+
         userData.then((data) => {
             console.log(data)
             data.forEach(user => {
@@ -29,9 +53,9 @@ function obtener_datos() {
                 containerUsers.appendChild(userElement);
             });
         }).catch(error => {
-        console.error("Error fetching users:", error);
-    });
-       
+            console.error("Error fetching users:", error);
+        });
+
     } catch (error) {
         console.error("Error:", error);
     }
@@ -103,11 +127,11 @@ function addUser() {
 
             } else {
 
-            
-            await post(urlUsers, newUser);
-            alert(" El usuario fue agregado correctamente");
-            form.reset();
-            obtener_datos();
+
+                await post(urlUsers, newUser);
+                alert(" El usuario fue agregado correctamente");
+                form.reset();
+                obtener_datos();
             }
         } catch (error) {
             console.log("Error agregando usuario:", error);

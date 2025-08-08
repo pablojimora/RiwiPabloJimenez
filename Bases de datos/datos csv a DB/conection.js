@@ -2,9 +2,12 @@ import fs from 'fs';
 import csv from 'csv-parser';
 import mysql from 'mysql2';
 
+
+ export const uploadCSV = () => {
+
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
+    user: 'pablojimenez',
     password: 'Maria0295*',
     database: 'tienda'
 });
@@ -28,3 +31,5 @@ fs.createReadStream('products.csv')
         console.log('CSV único procesado.');
         db.end();
     });
+    
+}

@@ -1,6 +1,7 @@
 import express, { json } from 'express';
 import pkg from 'pg';
 import cors from 'cors';
+import { uploadCSV } from './helpers.js';
 
 const { Pool } = pkg;
 
@@ -80,6 +81,12 @@ app.delete('/users/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//Csv 
+app.get('/importProducts', (req, res) => {
+  uploadCSV();
+  res.json({message:'CSV importado'})
+})
 
 
 // // Obtener todos los usuarios
